@@ -1,21 +1,14 @@
-import Contact from "./ui/Contact";
-import Experience from "./ui/Experience";
-import Hero from "./ui/Hero";
-import Navbar from "./ui/Navbar";
-import Projects from "./ui/Projects";
-import Skills from "./ui/Skills";
+import Content from "./page/Content";
+import Overlay from "./page/Overlay";
+
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <div className="container">
-        <Hero />
-        <Projects />
-        <Experience />
-        <Skills />
-        <Contact />
+    <div className="group relative">
+      <Overlay />
+      <div className="z-10 relative">
+        <Content />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,3 @@
-import { GradientText } from "../utility/GradientHover";
-
 const buttons = [
   {
     name: "Github",
@@ -15,7 +13,7 @@ const Hero = () => {
     <div className="card py-6 mb-20 ">
       <div className="flex flex-col justify-center items-center gap-2.5 mb-10">
         <h1 className="text-2xl  md:text-5xl lg:text-7xl primary font-display">
-          <GradientText text={"Prashant Nath"} />
+          Prashant Nath
         </h1>
         <p className="text-md md:text-2xl lg:3xl secondary">
           "Frontend Engineer | UI Engineer"

@@ -39,7 +39,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="background-gradient mb-30">
+    <div className=" mb-20 md:25">
       <h1 className="text-2xl text-primary font-display pl-4">
         Custom Projects
       </h1>

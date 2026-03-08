@@ -1,5 +1,3 @@
-import { GradientText } from "../utility/GradientHover";
-
 const navLinksName = [
   { name: "Experience", to: "#experience" },
   { name: "Skills", to: "#skills" },
@@ -11,7 +9,7 @@ const Navbar = () => {
     <div className="px-4 py-1 my-7 md:flex md:items-center md:justify-between">
       <div className="md:hover:animate-pulse">
         <h1 className="text-xs md:text-xl lg:text-2xl font-display">
-          <GradientText text={"@Prashant"} />
+          @Prashant
         </h1>
       </div>
       <div className="hidden md:block">
