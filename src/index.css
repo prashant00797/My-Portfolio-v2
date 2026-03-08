@@ -34,9 +34,16 @@
   /* custom cursor */
 
   --cursor-circle: url("/cursor.svg"), pointer;
+
+  /* tag */
+  --color-tag-bg: #dbeafe;
+  --color-tag-text: #1d4ed8;
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-primary-button);
@@ -64,10 +71,27 @@
     border-radius: var(--radius-card);
     box-shadow: var(--shadow-card);
   }
+  .link {
+    cursor: var(--cursor-circle);
+    @apply transition-all duration-200 ease-in-out hover:border-b border-primary;
+  }
+  .tag {
+    background: var(--color-tag-bg);
+    color: var(--color-tag-text);
+    @apply px-3 py-1 md:px-5 md:py-2 rounded-md text-xs font-medium;
+  }
 }
 
 @layer utilities {
   .custom-transition {
     @apply transition duration-200 ease-in-out hover:scale-105;
+  }
+
+  .background-gradient {
+    @apply bg-linear-to-b from-transparent via-blue-100/40 to-transparent;
+  }
+
+  .padding-margin {
+    @apply px-4 py-4;
   }
 }

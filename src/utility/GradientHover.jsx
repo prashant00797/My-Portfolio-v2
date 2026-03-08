@@ -1,6 +1,6 @@
 export const GradientText = ({ text }) => {
   return (
-    <h1 className="group">
+    <div className="group">
       {text.split("").map((letter, index) => (
         <span
           key={index}
@@ -10,6 +10,6 @@ export const GradientText = ({ text }) => {
           {letter}
         </span>
       ))}
-    </h1>
+    </div>
   );
 };
