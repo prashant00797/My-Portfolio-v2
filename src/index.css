@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  /* Backgrounds */
+  --color-background: #f8fafc; /* slate-50 */
+  --color-surface: #ffffff; /* cards */
+
+  /* Text */
+  --color-text-primary: #0f172a; /* slate-900 */
+  --color-text-secondary: #475569; /* slate-600 */
+  --color-text-muted: #64748b; /* slate-500 */
+
+  /* Borders */
+  --color-border: #e2e8f0; /* slate-200 */
+
+  /* Accent */
+  --color-primary: #0f172a; /* dark button */
+  --color-primary-foreground: #ffffff;
+
+  /* Subtle UI */
+  --color-muted: #f1f5f9; /* section background */
+
+  /* Radius */
+  --radius-card: 12px;
+  --radius-button: 10px;
+
+  /* Shadow */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  /* font */
+  --font-sans: "Inter", sans-serif; /* body */
+  --font-display: "Space Grotesk", sans-serif; /* headings */
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-6xl px-4 py-4 mx-auto;
+  }
+
+  .card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+  }
+}
