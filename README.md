@@ -16,7 +16,7 @@ https://prashantnathv2.netlify.app/
 ## Tech Stack
 
 - Next.js
-- TypeScript(Ongoing)
+- TypeScript
 - Tailwind CSS
 
 ## Custom Projects Highlighted
@@ -33,4 +33,4 @@ npm run dev
 
 ---
 
-Frontend Engineer focused on building scalable React applications.
+Frontend Engineer focused on building scalable applications.
