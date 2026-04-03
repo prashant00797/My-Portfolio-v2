@@ -49,7 +49,7 @@ export const LinkedIn = () => {
   );
 };
 
-export const ReactIcon = ({ className }) => {
+export const ReactIcon = ({ className }: { className: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ export const ReactIcon = ({ className }) => {
   );
 };
 
-export const JSIcon = ({ className }) => {
+export const JSIcon = ({ className }: { className: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ export const JSIcon = ({ className }) => {
   );
 };
 
-export const TailwindIcon = ({ className }) => {
+export const TailwindIcon = ({ className }: { className: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ export const TailwindIcon = ({ className }) => {
   );
 };
 
-export const HtmlIcon = ({ className }) => {
+export const HtmlIcon = ({ className }: { className: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@ export const HtmlIcon = ({ className }) => {
   );
 };
 
-export const CssIcon = ({ className }) => {
+export const CssIcon = ({ className }: { className: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +172,7 @@ export const CssIcon = ({ className }) => {
   );
 };
 
-export const ReduxIcon = ({ className }) => {
+export const ReduxIcon = ({ className }: { className: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +195,7 @@ export const ReduxIcon = ({ className }) => {
   );
 };
 
-export const NextJSIcon = ({ className }) => {
+export const NextJSIcon = ({ className }: { className: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -250,7 +250,7 @@ export const NextJSIcon = ({ className }) => {
   );
 };
 
-export const TSIcon = ({ className }) => {
+export const TSIcon = ({ className }: { className: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

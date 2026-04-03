@@ -1,6 +1,7 @@
+import type { ExpereinceData } from "@/types";
 import React from "react";
 
-const expData = [
+const expData: ExpereinceData[] = [
   {
     name: "Development Engineer - Frontend",
     description: "Avizva Solutions • Sep 2021 - Jan 2024",

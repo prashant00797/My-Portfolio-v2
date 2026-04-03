@@ -1,5 +1,6 @@
 import { Inter, Space_Grotesk } from "next/font/google";
 import "../global.css";
+import { type ReactNode } from "react";
 
 const interSans = Inter({
   variable: "--font-sans",
@@ -19,7 +20,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"

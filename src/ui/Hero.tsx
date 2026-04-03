@@ -1,4 +1,6 @@
-const buttons = [
+import type { ButtonsData } from "@/types";
+
+const buttons:ButtonsData[] = [
   {
     name: "Github",
     link: "https://github.com/prashant00797",

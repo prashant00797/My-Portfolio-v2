@@ -1,4 +1,4 @@
-const skills = [
+const skills: string[] = [
   "HTML5",
   "CSS3",
   "Javascript",

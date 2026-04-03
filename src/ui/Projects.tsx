@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { project1_url, project2_url } from "@/common/constants";
+import type { ProjectsData } from "@/types";
 
-const projects = [
+const projects: ProjectsData[] = [
   {
     name: "Insure AI Portal",
     image: project1_url,

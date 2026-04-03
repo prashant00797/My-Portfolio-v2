@@ -1,5 +1,5 @@
-import Content from "../page/Content";
-import Overlay from "../page/Overlay";
+import Content from "@/page/Content";
+import Overlay from "@/page/Overlay";
 
 const Page = () => {
   return (

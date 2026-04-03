@@ -1,4 +1,6 @@
-const navLinksName = [
+import type { NavLinkData } from "@/types";
+
+const navLinksName: NavLinkData[] = [
   { name: "Experience", to: "#experience" },
   { name: "Skills", to: "#skills" },
   { name: "Contact", to: "#contact" },

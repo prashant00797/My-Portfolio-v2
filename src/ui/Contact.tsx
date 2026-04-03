@@ -1,6 +1,7 @@
 import { Email, Github, LinkedIn } from "@/utility/Icons";
+import type { ContactData } from "../types/index";
 
-const contactData = [
+const contactData: ContactData[] = [
   {
     name: "Email",
     link: "mailto:prashantnath6307@gmail.com",
