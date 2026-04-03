@@ -1,4 +1,5 @@
-import { project1_url, project2_url } from "../common/constants";
+import Image from "next/image";
+import { project1_url, project2_url } from "@/common/constants";
 
 const projects = [
   {
@@ -51,7 +52,7 @@ const Projects = () => {
               className="card p-3 flex flex-col md:w-105 lg:w-125  gap-4 custom-transition"
             >
               <div>
-                <img src={project.image} alt="Project" />
+                <Image src={project.image} alt="Project" priority />
               </div>
               <span className="font-display pl-2 text-xl  md:text-2xl lg:text-3xl">
                 {project.name}
@@ -62,6 +63,7 @@ const Projects = () => {
               <div className=" pt-2 flex items-center justify-between">
                 {project.links.map((item, idx) => (
                   <button
+                    key={idx}
                     className={`text-sm md:text-xl custom-transition ${item.active ? "button w-20 h-10 md:min-w-30 text-center" : "button w-20 h-10 md:min-w-30 text-center bg-gray-400"}`}
                   >
                     <a key={idx} href={item.url} target="_blank">

@@ -1,4 +1,4 @@
-import { Email, Github, LinkedIn } from "../utility/Icons";
+import { Email, Github, LinkedIn } from "@/utility/Icons";
 
 const contactData = [
   {
@@ -27,7 +27,7 @@ const Contact = () => {
 
       <div className="flex justify-center gap-6 font-display">
         {contactData.map((item, idx) => (
-          <div className="flex  items-center gap-2 custom-transition">
+          <div key={idx} className="flex  items-center gap-2 custom-transition">
             <div>{item.element}</div>
             <a key={idx} href={item.link} target="_blank">
               {item.name}

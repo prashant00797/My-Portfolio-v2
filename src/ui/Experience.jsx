@@ -1,3 +1,5 @@
+import React from "react";
+
 const expData = [
   {
     name: "Development Engineer - Frontend",
@@ -24,8 +26,8 @@ const Experience = () => {
       </h1>
       <div className="flex gap-4">
         {expData.map((item, idx) => (
-          <>
-            <div key={idx} className="px-4">
+          <React.Fragment key={idx}>
+            <div className="px-4">
               <h1 className="text-xs md:text-xl mb-1 text-primary">
                 {item.name}
               </h1>
@@ -39,7 +41,7 @@ const Experience = () => {
                 </ul>
               ))}
             </div>
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

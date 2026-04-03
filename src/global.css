@@ -24,12 +24,7 @@
   /* Shadow */
   --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
 
-  /* font */
-  --font-sans: "Inter", sans-serif; /* body */
-  --font-display: "Space Grotesk", sans-serif; /* headings */
-
   /* custom cursor */
-
   --cursor-circle: url("/cursor.svg"), pointer;
 
   /* tag */

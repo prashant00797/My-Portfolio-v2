@@ -16,10 +16,11 @@ const Navbar = () => {
         <ul className="flex flex-row items-center gap-6 ">
           {navLinksName.map((link, idx) => (
             <a
+              key={idx}
               href={link.to}
               className="md:text-sm lg:text-xl custom-transition font-display"
             >
-              <li key={idx}>{link.name}</li>
+              <li>{link.name}</li>
             </a>
           ))}
         </ul>

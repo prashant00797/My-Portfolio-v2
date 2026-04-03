@@ -1,7 +1,7 @@
-import Content from "./page/Content";
-import Overlay from "./page/Overlay";
+import Content from "../page/Content";
+import Overlay from "../page/Overlay";
 
-const App = () => {
+const Page = () => {
   return (
     <div className="group relative">
       <Overlay />
@@ -12,4 +12,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Page;
