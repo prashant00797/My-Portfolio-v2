@@ -15,8 +15,8 @@ https://prashantnathv2.netlify.app/
 
 ## Tech Stack
 
-- React
-- Vite
+- Next.js
+- TypeScript(Ongoing)
 - Tailwind CSS
 
 ## Custom Projects Highlighted
