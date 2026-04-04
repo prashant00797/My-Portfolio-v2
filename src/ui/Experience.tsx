@@ -26,8 +26,8 @@ const Experience = () => {
         Experience
       </h1>
       <div className="flex gap-4">
-        {expData.map((item, idx) => (
-          <React.Fragment key={idx}>
+        {expData.map((item) => (
+          <React.Fragment key={item.name}>
             <div className="px-4">
               <h1 className="text-xs md:text-xl mb-1 text-primary">
                 {item.name}
@@ -36,11 +36,13 @@ const Experience = () => {
               <p className="text-xs md:text-[15px] mb-2">
                 <i>{item.promotion}</i>
               </p>
-              {item.bullets.map((bullet, idx) => (
-                <ul key={idx} className="list-disc list-inside py-2">
-                  <li className="text-xs md:text-xl leading-7">{bullet}</li>
-                </ul>
-              ))}
+              <ul className="list-disc list-inside py-2">
+                {item.bullets.map((bullet, idx) => (
+                  <li key={idx} className="text-xs md:text-xl leading-7">
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
             </div>
           </React.Fragment>
         ))}

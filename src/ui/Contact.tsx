@@ -27,10 +27,13 @@ const Contact = () => {
       </p>
 
       <div className="flex justify-center gap-6 font-display">
-        {contactData.map((item, idx) => (
-          <div key={idx} className="flex  items-center gap-2 custom-transition">
+        {contactData.map((item) => (
+          <div
+            key={item.name}
+            className="flex  items-center gap-2 custom-transition"
+          >
             <div>{item.element}</div>
-            <a key={idx} href={item.link} target="_blank">
+            <a href={item.link} target="_blank">
               {item.name}
             </a>
           </div>

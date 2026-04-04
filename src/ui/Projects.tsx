@@ -46,10 +46,10 @@ const Projects = () => {
         Custom Projects
       </h1>
       <div className="mt-4 flex flex-col items-center justify-around md:flex-row gap-4 md:gap-1 px-4 md:px-1 lg:px-0">
-        {projects.map((project, idx) => {
+        {projects.map((project) => {
           return (
             <div
-              key={idx}
+              key={project.name}
               className="card p-3 flex flex-col md:w-105 lg:w-125  gap-4 custom-transition"
             >
               <div>
@@ -62,12 +62,12 @@ const Projects = () => {
                 {project.description}
               </span>
               <div className=" pt-2 flex items-center justify-between">
-                {project.links.map((item, idx) => (
+                {project.links.map((item) => (
                   <button
-                    key={idx}
+                    key={item.name}
                     className={`text-sm md:text-xl custom-transition ${item.active ? "button w-20 h-10 md:min-w-30 text-center" : "button w-20 h-10 md:min-w-30 text-center bg-gray-400"}`}
                   >
-                    <a key={idx} href={item.url} target="_blank">
+                    <a href={item.url} target="_blank">
                       {item.name}
                     </a>
                   </button>

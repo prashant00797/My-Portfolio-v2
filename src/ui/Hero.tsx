@@ -1,6 +1,6 @@
 import type { ButtonsData } from "@/types";
 
-const buttons:ButtonsData[] = [
+const buttons: ButtonsData[] = [
   {
     name: "Github",
     link: "https://github.com/prashant00797",
@@ -27,8 +27,13 @@ const Hero = () => {
         </p>
       </div>
       <div className="flex justify-center items-center gap-10">
-        {buttons.map((ele, idx) => (
-          <a key={idx} href={ele.link} download={ele.download} target="_blank">
+        {buttons.map((ele) => (
+          <a
+            key={ele.name}
+            href={ele.link}
+            download={ele.download}
+            target="_blank"
+          >
             <button className="button w-20 h-10 md:min-w-30 ">
               {ele.name}
             </button>
