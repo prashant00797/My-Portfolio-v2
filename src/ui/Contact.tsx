@@ -21,11 +21,22 @@ const contactData: ContactData[] = [
 
 const Contact = () => {
   return (
-    <div id="contact" className="card mt-10 text-center py-2">
-      <p className="text-primary mb-8">
-        I'm open to new opportunities and collaborations.
-      </p>
-
+    <div
+      id="contact"
+      className="card mt-10 text-center py-2 flex flex-col gap-4"
+    >
+      <div>
+        <p className="text-primary">
+          I'm open to new opportunities and collaborations.
+        </p>
+        <div className="flex justify-center items-center gap-3 mt-1">
+          <span className="w-8 border-t border-border"></span>
+          <span className="text-text-muted text-sm">
+            Built with Next.js & Tailwind
+          </span>
+          <span className="w-8 border-t border-border"></span>
+        </div>
+      </div>
       <div className="flex justify-center gap-6 font-display">
         {contactData.map((item) => (
           <div
