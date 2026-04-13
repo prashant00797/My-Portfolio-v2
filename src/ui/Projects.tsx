@@ -46,7 +46,7 @@ const Projects = () => {
         AI Projects & Engineering Work
       </h1>
       <p className="pl-4 text-secondary font-display">
-        Real-world applications focused on AI integration, performance, and
+        Real-world applications focused on AI integration, performance and
         scalable frontend architecture.
       </p>
       <div className="mt-4 flex flex-col items-center justify-around md:flex-row gap-4 md:gap-1 px-4 md:px-1 lg:px-0">
