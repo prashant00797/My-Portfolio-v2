@@ -7,7 +7,7 @@ import Skills from "@/ui/Skills";
 
 const Content = () => {
   return (
-    <>
+    <main>
       <Navbar />
       <div className="container">
         <Hero />
@@ -16,7 +16,7 @@ const Content = () => {
         <Skills />
         <Contact />
       </div>
-    </>
+    </main>
   );
 };
 

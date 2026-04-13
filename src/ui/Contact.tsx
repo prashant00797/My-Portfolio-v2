@@ -31,7 +31,7 @@ const Contact = () => {
         </p>
         <div className="flex justify-center items-center gap-3 mt-1">
           <span className="w-8 border-t border-border"></span>
-          <span className="text-text-muted text-sm">
+          <span className="text-secondary text-sm">
             Built with Next.js & Tailwind
           </span>
           <span className="w-8 border-t border-border"></span>

@@ -3,7 +3,7 @@ import React from "react";
 
 const expData: ExpereinceData[] = [
   {
-    name: "Development Engineer - Frontend",
+    name: "Development Engineer",
     description: "Avizva Solutions • Sep 2021 - Jan 2024",
     promotion:
       "Promoted from Associate Trainee → Associate Frontend Developer → Development Engineer.",

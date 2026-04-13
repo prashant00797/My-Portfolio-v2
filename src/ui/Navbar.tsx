@@ -17,13 +17,14 @@ const Navbar = () => {
       <div className="hidden md:block">
         <ul className="flex flex-row items-center gap-6 ">
           {navLinksName.map((link) => (
-            <a
-              key={link.name}
-              href={link.to}
-              className="md:text-sm lg:text-xl custom-transition font-display"
-            >
-              <li>{link.name}</li>
-            </a>
+            <li key={link.name}>
+              <a
+                className="md:text-sm lg:text-xl custom-transition font-display"
+                href={link.to}
+              >
+                {link.name}
+              </a>
+            </li>
           ))}
         </ul>
       </div>

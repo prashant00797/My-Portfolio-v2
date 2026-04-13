@@ -19,12 +19,15 @@ const Hero = () => {
         <h1 className="text-2xl  md:text-5xl lg:text-7xl primary font-display">
           Prashant Nath
         </h1>
-        <p className="text-md md:text-2xl lg:3xl secondary">
-          "Frontend Engineer | UI Engineer"
+        <p className="text-md text-center md:text-2xl lg:3xl secondary">
+          Frontend Developer | React · Next.js · TypeScript
         </p>
-        <p className="group text-center md:text-justify text-xs md:text-xl lg:text-2xl text-gray-500 px-px md:px-0">
-          Frontend Engineer focused on building scalable React applications.
+        <p className="text-center text-xs md:text-xl lg:text-2xl text-gray-300 px-px md:px-0">
+          Building scalable, high-performance web applications.
         </p>
+        <span className="text-center text-xs md:text-xl lg:text-2xl text-gray-300 px-px md:px-0">
+          Exploring LLM applications using LangChain, LangGraph and Python.
+        </span>
       </div>
       <div className="flex justify-center items-center gap-10">
         {buttons.map((ele) => (
