@@ -16,18 +16,15 @@ const Hero = () => {
   return (
     <div className="card py-6 mb-20 ">
       <div className="flex flex-col justify-center items-center gap-2.5 mb-10">
-        <h1 className="text-2xl  md:text-5xl lg:text-7xl primary font-display">
+        <h1 className="text-2xl  md:text-5xl lg:text-7xl text-primary font-display">
           Prashant Nath
         </h1>
-        <p className="text-md text-center md:text-2xl lg:3xl secondary">
-          Frontend Developer | React · Next.js · TypeScript
+        <p className="text-md text-center md:text-2xl lg:3xl text-secondary">
+          Developer building AI-powered web applications
         </p>
-        <p className="text-center text-xs md:text-xl lg:text-2xl text-gray-300 px-px md:px-0">
-          Building scalable, high-performance web applications.
+        <p className="text-center text-xs md:text-xl lg:text-2xl text-secondary px-px md:px-0">
+          React · Next.js · Python · LLM Frameworks
         </p>
-        <span className="text-center text-xs md:text-xl lg:text-2xl text-gray-300 px-px md:px-0">
-          Exploring LLM applications using LangChain, LangGraph and Python.
-        </span>
       </div>
       <div className="flex justify-center items-center gap-10">
         {buttons.map((ele) => (

@@ -30,21 +30,36 @@
   /* tag */
   --color-tag-bg: #dbeafe;
   --color-tag-text: #1d4ed8;
+
+  /* chat bubbles */
+  --color-user: #155dfc;
+  --color-assistant: #f3f4f6;
+  --color-assistant-text: #101828;
+
+  /* fallbacks */
+  --color-white: #fff;
+  --color-black: #000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #0f172a; /* slate-900 */
-    --color-surface: #1e293b; /* slate-800 — cards */
-    --color-primary: #f1f5f9; /* slate-100 */
-    --color-secondary: #94a3b8; /* slate-400 */
-    --color-text-muted: #64748b; /* slate-500 */
-    --color-border: #334155; /* slate-700 */
-    --color-primary-button: #f1f5f9; /* light button */
-    --color-primary-foreground: #0f172a;
-    --color-tag-bg: #1e3a5f; /* dark blue */
-    --color-tag-text: #93c5fd; /* blue-300 */
-    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --color-background: #060d1f;
+    --color-surface: #0d1b3e;
+    --color-primary: #e8eef7;
+    --color-secondary: #a8b8d0;
+    --color-text-muted: #6b82a0;
+    --color-primary-button: #e2e8f0;
+    --color-primary-foreground: #060d1f;
+    --color-border: #1a3060;
+    --color-tag-bg: #0a2550;
+    --color-tag-text: #60a5fa;
+    --color-user: #2563eb;
+    --color-assistant: #162447;
+    --color-assistant-text: #e8eef7;
+    --shadow-card: 0 2px 12px rgba(0, 80, 255, 0.08);
+  }
+  .button {
+    border-color: rgba(255, 255, 255, 0.15);
   }
 }
 
@@ -54,9 +69,21 @@
   }
   body {
     background-color: var(--color-background);
-    color: var(--color-primary-button);
+    color: var(--color-primary);
     font-family: var(--font-sans);
     cursor: var(--cursor-circle);
+  }
+  textarea {
+    scrollbar-width: none;
+  }
+  textarea::-webkit-scrollbar {
+    display: none;
+  }
+  #chat-area {
+    scrollbar-width: none;
+  }
+  #chat-area::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -68,6 +95,7 @@
   .button {
     background-color: var(--color-primary);
     color: var(--color-primary-foreground);
+    border: 1px solid transparent;
     border-radius: var(--radius-button);
     cursor: var(--cursor-circle);
     @apply transition duration-300 ease-in-out hover:scale-110;

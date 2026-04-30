@@ -1,5 +1,6 @@
-import Content from "@/page/Content";
-import Overlay from "@/page/Overlay";
+import Overlay from "@/components/portfolio/ui/OverlayUI";
+import Content from "@/components/portfolio/page/ContentPage";
+import ChatbotWrapper from "@/components/chat/ChatbotWrapper";
 
 const Page = () => {
   return (
@@ -8,6 +9,7 @@ const Page = () => {
       <div className="z-10 relative">
         <Content />
       </div>
+      <ChatbotWrapper />
     </div>
   );
 };

@@ -26,12 +26,31 @@ export type NavLinkData = {
 
 type LinksData = {
   name: string;
-  url: string;
+  url?: string;
   active?: boolean;
+  toolTip?: boolean;
+  toolTipText?: string;
 };
 export type ProjectsData = {
   name: string;
   image: StaticImageData;
   description: string;
   links: LinksData[];
+};
+
+export type ChatWidgetProps = {
+  onClose: (openChat: boolean) => void;
+  thread_id: string;
+};
+
+export type Message = {
+  role: "user" | "assistant";
+  content: string;
+};
+
+export type ChatInputProps = {
+  onSend: (input: string) => void;
+  setInput: (input: string) => void;
+  input: string;
+  streaming: boolean;
 };

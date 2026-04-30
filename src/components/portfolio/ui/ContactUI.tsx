@@ -1,5 +1,5 @@
 import { Email, Github, LinkedIn } from "@/utility/Icons";
-import type { ContactData } from "../types/index";
+import type { ContactData } from "@/types/index";
 
 const contactData: ContactData[] = [
   {

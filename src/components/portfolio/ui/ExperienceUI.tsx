@@ -21,7 +21,7 @@ const expData: ExpereinceData[] = [
 
 const Experience = () => {
   return (
-    <div id="experience" className="padding-margin bg-primary-foreground mb-10">
+    <div id="experience" className="padding-margin bg-background mb-10">
       <h1 className=" text-xl md:text-6xl text-primary font-display pl-4 mb-5">
         Experience
       </h1>
@@ -29,16 +29,21 @@ const Experience = () => {
         {expData.map((item) => (
           <React.Fragment key={item.name}>
             <div className="px-4">
-              <h1 className="text-xs md:text-xl mb-1 text-primary">
+              <h1 className="text-xs md:text-xl mb-1 text-secondary">
                 {item.name}
               </h1>
-              <p className="text-xs md:text-[16px] mb-2">{item.description}</p>
-              <p className="text-xs md:text-[15px] mb-2">
+              <p className="text-xs md:text-[16px] mb-2 text-secondary">
+                {item.description}
+              </p>
+              <p className="text-xs md:text-[15px] mb-2 text-secondary">
                 <i>{item.promotion}</i>
               </p>
               <ul className="list-disc list-inside py-2">
                 {item.bullets.map((bullet, idx) => (
-                  <li key={idx} className="text-xs md:text-xl leading-7">
+                  <li
+                    key={idx}
+                    className="text-xs md:text-xl leading-7 text-secondary"
+                  >
                     {bullet}
                   </li>
                 ))}
