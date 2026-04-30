@@ -31,7 +31,7 @@ An agentic AI chat widget powered by LangGraph, RAG and FastAPI. Answers questio
 NEXT_PUBLIC_API_URL=http://localhost:8000/api/chat
 ```
 
-### Frontend Projects
+### Frontend
 
 **Insure AI** – AI-powered health insurance dashboard using Gemini API.
 [Repo](https://github.com/prashant00797/ai-insurance-app)
