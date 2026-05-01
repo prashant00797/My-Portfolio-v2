@@ -32,7 +32,7 @@ const ChatWidget = ({ onClose, thread_id }: ChatWidgetProps) => {
   };
 
   return (
-    <div className="w-90 h-125 md:w-100  card fixed right-3 bottom-22 md:bottom-20 md:right-20 z-90 flex flex-col cursor-default">
+    <div className="w-85 h-125 md:w-100  card fixed right-3 bottom-22 md:bottom-20 md:right-20 z-90 flex flex-col cursor-default">
       <div
         id="header"
         className="h-20 shadow-card rounded-t-[12px] flex items-center justify-between p-7  bg-surface border-b border-border"
