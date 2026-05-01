@@ -13,6 +13,7 @@ const skills: string[] = [
   "Langchain-Langraph",
   "RAG",
   "PostgresSql",
+  "Vector Databases",
   "Git",
   "Parcel",
   "Webpack",
@@ -33,7 +34,7 @@ const Skills = () => {
         className=" flex gap-1 justify-center flex-wrap mb-20 font-display"
       >
         {skills.map((item, idx) => (
-          <div key={idx} className="inline-block mr-2 mb-2">
+          <div key={idx} className="inline-block mr-2 mb-2 custom-transition">
             <span className="tag">{item}</span>
           </div>
         ))}

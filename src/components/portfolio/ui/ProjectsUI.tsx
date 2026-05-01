@@ -26,7 +26,7 @@ const frontendProjects: ProjectsData[] = [
     name: "Insure AI Portal",
     image: project1_url,
     description:
-      "InsureAI is an AI-powered health insurance dashboard that allows users to search claims and healthcare providers using natural language using Gemini AI.",
+      "SaaS-style health insurance dashboard simulating real-world claims and provider workflows, enhanced with intent-based AI search for structured data navigation.",
     links: [
       {
         name: "Github",
@@ -43,7 +43,7 @@ const frontendProjects: ProjectsData[] = [
     name: "Insight AI",
     image: project2_url,
     description:
-      "Free AI-powered text summarizer that generates concise summaries, key insights, and bullet points from long articles using Gemini AI.",
+      "AI-powered text summarizer that generates concise summaries, key insights and bullet points from long articles using Open AI.",
     links: [
       {
         name: "Github",
@@ -103,8 +103,8 @@ const Projects = () => {
         Projects & Engineering Work
       </h1>
       <p className="text-secondary font-display mt-1 mb-8">
-        Real-world applications focused on AI integration, performance and
-        scalable architecture.
+        Real-world applications focused on AI integration, interactive systems
+        and end-to-end user flows.
       </p>
 
       {/* Fullstack AI Projects */}
@@ -113,7 +113,6 @@ const Projects = () => {
           <h2 className="text-lg font-display font-semibold text-primary">
             Fullstack AI Projects
           </h2>
-          <span className="tag">In Progress</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {aiProjects.map((project) => (

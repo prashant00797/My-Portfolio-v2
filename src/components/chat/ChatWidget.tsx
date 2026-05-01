@@ -5,22 +5,23 @@ import ChatInput from "./ChatInput";
 import ChatMessageBubble from "./ChatMessageBubble";
 import {
   AGENT_NAME,
+  AGENT_THINKING_STATE,
   CLOSE_CHAT_LABEL,
+  LOADING_STATE,
   ONLINE_STATUS_LABEL,
 } from "@/common/constants";
 
-const ChatWidget = ({ onClose, thread_id }: ChatWidgetProps) => {
+const ChatWidget = ({
+  onClose,
+  thread_id,
+  message,
+  setMessage,
+}: ChatWidgetProps) => {
   const [input, setInput] = useState("");
   const scrollBottomRef = useRef<HTMLDivElement>(null);
 
-  const {
-    message,
-    streaming,
-    pondering,
-    statusText,
-    streamingText,
-    sendMessage,
-  } = useStream(thread_id);
+  const { streaming, pondering, statusText, streamingText, sendMessage } =
+    useStream(thread_id, message, setMessage);
 
   useEffect(() => {
     scrollBottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -68,14 +69,14 @@ const ChatWidget = ({ onClose, thread_id }: ChatWidgetProps) => {
         {pondering && !streamingText && (
           <div className="flex justify-start">
             <span className="text-xs text-secondary italic px-1 animate-pulse">
-              {`Pondering...`}
+              {LOADING_STATE}
             </span>
           </div>
         )}
         {statusText && !streamingText && (
           <div className="flex justify-start">
             <span className="text-xs text-secondary italic px-1 animate-pulse">
-              {`Agent thinking : ${statusText}`}
+              {`${AGENT_THINKING_STATE} : ${statusText}`}
             </span>
           </div>
         )}

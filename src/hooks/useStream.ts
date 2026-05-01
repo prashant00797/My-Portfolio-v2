@@ -12,14 +12,11 @@ import {
 import type { Message } from "@/types";
 import { useState } from "react";
 
-export const useStream = (thread_id: string) => {
-  const [message, setMessage] = useState<Message[]>([
-    {
-      role: ONBOARDING_MESSAGE.role,
-      content: ONBOARDING_MESSAGE.content,
-    },
-  ]);
-
+export const useStream = (
+  thread_id: string,
+  message: Message[],
+  setMessage: React.Dispatch<React.SetStateAction<Message[]>>,
+) => {
   const [streaming, setIsStreaming] = useState(false);
   const [pondering, setIsPondering] = useState(false);
   const [statusText, setStatusText] = useState("");

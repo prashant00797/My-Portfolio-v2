@@ -12,6 +12,8 @@ export const USER = "user";
 export const errorMessage =
   "Hi I am facing trouble at this moment. Please try again after sometime. Sorry for the inconvenience caused.";
 export const AGENT_NAME = "Viola";
+export const AGENT_THINKING_STATE = "Viola thinking";
+export const LOADING_STATE = "pondering...";
 export const ONLINE_STATUS_LABEL = "Online";
 export const CLOSE_CHAT_LABEL = "X";
 
@@ -21,7 +23,7 @@ export const HEADERS_CONTENT_TYPE = {
 
 export const INPUT_PLACEHOLDER = {
   DEFAULT: "Ask anything...",
-  RESPONDING: "Agent Responding...",
+  RESPONDING: "Viola Responding...",
 };
 
 export const ONBOARDING_MESSAGE = {

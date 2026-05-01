@@ -8,13 +8,13 @@ const expData: ExpereinceData[] = [
     promotion:
       "Promoted from Associate Trainee → Associate Frontend Developer → Development Engineer.",
     bullets: [
-      "Built and maintained a healthcare insurance member portal using React, Redux, and REST APIs",
-      "Developed interactive dashboards with charts, filters, and date range selection for claims insights.",
-      "Improved application performance using lazy loading, debouncing, and optimized API usage.",
+      "Built and maintained a healthcare insurance member portal using React, Redux and REST APIs",
+      "Developed interactive dashboards with charts, filters and date range selection for claims insights.",
+      "Improved application performance using lazy loading, debouncing and optimized API usage.",
       "Created reusable UI components to accelerate development across modules.",
       "Contributed to Cordova-based mobile releases for Android and iOS.",
       "Managed deployments using Git branching workflows and AWS S3 hosting.",
-      "Collaborated with cross-functional teams in an Agile/Scrum environment, participating in sprint planning, stand-ups, and code reviews.",
+      "Collaborated with cross-functional teams in an Agile/Scrum environment, participating in sprint planning, stand-ups and code reviews.",
     ],
   },
 ];

@@ -120,7 +120,7 @@
 
 @layer utilities {
   .custom-transition {
-    @apply transition duration-200 ease-in-out hover:scale-105;
+    @apply transition duration-200 ease-in-out hover:scale-102;
   }
 
   .padding-margin {

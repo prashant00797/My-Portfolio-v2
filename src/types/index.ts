@@ -41,6 +41,8 @@ export type ProjectsData = {
 export type ChatWidgetProps = {
   onClose: (openChat: boolean) => void;
   thread_id: string;
+  message: Message[];
+  setMessage: React.Dispatch<React.SetStateAction<Message[]>>;
 };
 
 export type Message = {

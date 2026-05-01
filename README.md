@@ -33,10 +33,10 @@ NEXT_PUBLIC_API_URL=http://localhost:8000/api/chat
 
 ### Frontend
 
-**Insure AI** – AI-powered health insurance dashboard using Gemini API.
+**Insure AI** – AI-powered health insurance dashboard using Open AI API.
 [Repo](https://github.com/prashant00797/ai-insurance-app)
 
-**Insight AI** – AI text summarizer for long content using Gemini API.
+**Insight AI** – AI text summarizer for long content using Open AI API.
 [Repo](https://github.com/prashant00797/ai-summary-app)
 
 ---
