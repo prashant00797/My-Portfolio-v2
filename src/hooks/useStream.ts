@@ -2,7 +2,6 @@ import {
   ASSISTANT,
   errorMessage,
   HEADERS_CONTENT_TYPE,
-  ONBOARDING_MESSAGE,
   POST,
   STREAM_EVENTS,
   TOOL_MESSAGES,
@@ -56,7 +55,6 @@ export const useStream = (
         for (const line of lines) {
           if (line.startsWith("data: ")) {
             const parsed = JSON.parse(line.replace("data: ", ""));
-            console.log(parsed);
             if (parsed.type === STREAM_EVENTS.TOKEN_EVENT) {
               setIsPondering(false);
               accumulatedText += parsed.content;
