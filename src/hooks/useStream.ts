@@ -39,6 +39,18 @@ export const useStream = (
         }),
       });
 
+      if (response.status === 429) {
+        setMessage((prev) => [
+          ...prev,
+          {
+            role: ASSISTANT,
+            content:
+              "You're sending messages too fast. Please wait a moment and try again.",
+          },
+        ]);
+        return;
+      }
+
       const reader = response.body?.getReader();
       if (!reader) return;
       const decoder = new TextDecoder();
