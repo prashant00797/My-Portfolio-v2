@@ -16,7 +16,6 @@ export type ExpereinceData = {
 export type ButtonsData = {
   name: string;
   link: string;
-  download: boolean;
 };
 
 export type NavLinkData = {
@@ -36,6 +35,7 @@ export type ProjectsData = {
   image: StaticImageData;
   description: string;
   links: LinksData[];
+  status: "InProgress" | "Completed";
 };
 
 export type ChatWidgetProps = {
@@ -55,4 +55,8 @@ export type ChatInputProps = {
   setInput: (input: string) => void;
   input: string;
   streaming: boolean;
+};
+
+export type FloaterProps = {
+  className?: string;
 };

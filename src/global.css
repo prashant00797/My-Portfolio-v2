@@ -41,7 +41,8 @@
   --color-black: #000;
 }
 
-@media (prefers-color-scheme: dark) {
+/* commenting out for now */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: #060d1f;
     --color-surface: #0d1b3e;
@@ -61,7 +62,7 @@
   .button {
     border-color: rgba(255, 255, 255, 0.15);
   }
-}
+} */
 
 @layer base {
   html {

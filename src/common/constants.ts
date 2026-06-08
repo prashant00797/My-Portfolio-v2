@@ -1,10 +1,12 @@
-import project1 from "../assets/project1.png";
-import project2 from "../assets/project2.png";
-import project3 from "../assets/project3.png";
+import project1 from "@/assets/project1.png";
+import project2 from "@/assets/project2.png";
+import project3 from "@/assets/project3.png";
+import product1 from "@/assets/product1.png";
 
 export const project1_url = project1;
 export const project2_url = project2;
 export const project3_url = project3;
+export const product1_url = product1;
 
 export const POST = "POST";
 export const ASSISTANT = "assistant";

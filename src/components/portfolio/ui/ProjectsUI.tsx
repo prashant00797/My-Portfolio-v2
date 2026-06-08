@@ -1,8 +1,34 @@
 import Image from "next/image";
-import { project1_url, project2_url, project3_url } from "@/common/constants";
+import {
+  product1_url,
+  project1_url,
+  project2_url,
+  project3_url,
+} from "@/common/constants";
 import type { ProjectsData } from "@/types";
 
-const aiProjects: ProjectsData[] = [
+const product: ProjectsData[] = [
+  {
+    name: "Crevia",
+    image: product1_url,
+    description:
+      "Crevia is a Creator OS — a platform to help creators plan, generate and manage their content faster. ",
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/prashant00797/crevia-landing",
+      },
+      {
+        name: "Landing Page",
+        url: "https://crevia-landing.netlify.app",
+        active: true,
+      },
+    ],
+    status: "InProgress",
+  },
+];
+
+const projects: ProjectsData[] = [
   {
     name: "Portfolio Assistant",
     image: project3_url,
@@ -18,10 +44,8 @@ const aiProjects: ProjectsData[] = [
         active: true,
       },
     ],
+    status: "Completed",
   },
-];
-
-const frontendProjects: ProjectsData[] = [
   {
     name: "Insure AI Portal",
     image: project1_url,
@@ -38,6 +62,7 @@ const frontendProjects: ProjectsData[] = [
         active: true,
       },
     ],
+    status: "Completed",
   },
   {
     name: "Insight AI",
@@ -55,19 +80,40 @@ const frontendProjects: ProjectsData[] = [
         active: true,
       },
     ],
+    status: "Completed",
   },
 ];
 
+const ProjectStatusTag = ({ status }: { status: ProjectsData["status"] }) => {
+  const isInProgress = status === "InProgress";
+
+  return (
+    <span className="absolute right-3 top-3 z-20 inline-flex items-center gap-2 rounded-full border border-border bg-surface/90 px-3 py-1.5 text-xs font-semibold text-primary shadow-[var(--shadow-card)] backdrop-blur-md">
+      <span className="relative flex h-2 w-2">
+        {isInProgress && (
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-tag-text opacity-40" />
+        )}
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-tag-text" />
+      </span>
+      {isInProgress ? "In progress" : "Completed"}
+    </span>
+  );
+};
+
 const ProjectCard = ({ project }: { project: ProjectsData }) => (
   <div className="card p-4 flex flex-col justify-between gap-3 custom-transition w-full max-w-lg">
-    <div className="rounded-lg overflow-hidden h-56 w-full relative">
+    <div className="relative aspect-[1.9/1] w-full overflow-hidden rounded-lg bg-background">
       <Image
         src={project.image}
         alt={`${project.name} preview`}
         fill
-        className="object-cover"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-contain"
         priority
       />
+      {project.status === "InProgress" && (
+        <ProjectStatusTag status={project.status} />
+      )}
     </div>
     <span className="font-display text-lg md:text-xl font-semibold text-primary">
       {project.name}
@@ -100,22 +146,22 @@ const Projects = () => {
   return (
     <div className="mb-20 md:mb-25 px-4">
       <h1 className="text-2xl font-display font-bold text-primary">
-        Projects & Engineering Work
+        What I've Built
       </h1>
       <p className="text-secondary font-display mt-1 mb-8">
-        Real-world applications focused on AI integration, interactive systems
-        and end-to-end user flows.
+        Products, applications and systems built with React, Node.js, Python and
+        AI-powered workflows.
       </p>
 
-      {/* Fullstack AI Projects */}
+      {/* Product */}
       <div className="mb-10">
         <div className="flex items-center gap-3 mb-1">
           <h2 className="text-lg font-display font-semibold text-primary">
-            Fullstack AI Projects
+            Product
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {aiProjects.map((project) => (
+          {product.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
         </div>
@@ -123,15 +169,15 @@ const Projects = () => {
 
       <div className="border-t border-border my-8" />
 
-      {/* Frontend Projects */}
+      {/* Projects */}
       <div>
         <div className="mb-1">
           <h2 className="text-lg font-display font-semibold text-primary">
-            Frontend Projects
+            Projects
           </h2>
         </div>
         <div className="flex flex-col md:flex-row gap-4">
-          {frontendProjects.map((project) => (
+          {projects.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
         </div>
