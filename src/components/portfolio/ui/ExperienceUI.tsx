@@ -6,7 +6,7 @@ const expData: ExpereinceData[] = [
     name: "Development Engineer",
     description: "Avizva Solutions • Sep 2021 - Jan 2024",
     promotion:
-      "Promoted from Associate Trainee → Associate Frontend Developer → Development Engineer.",
+      "Promoted from Associate Trainee → Associate Developer → Development Engineer.",
     bullets: [
       "Worked on enterprise healthcare software serving insurance members, providers and claims workflows.",
       "Contributed across frontend development, API integrations, deployment activities and production releases",
