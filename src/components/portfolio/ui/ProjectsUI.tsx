@@ -88,7 +88,7 @@ const ProjectStatusTag = ({ status }: { status: ProjectsData["status"] }) => {
   const isInProgress = status === "InProgress";
 
   return (
-    <span className="absolute right-3 top-3 z-20 inline-flex items-center gap-2 rounded-full border border-border bg-surface/90 px-3 py-1.5 text-xs font-semibold text-primary shadow-[var(--shadow-card)] backdrop-blur-md">
+    <span className="absolute right-3 top-3 z-20 inline-flex items-center gap-2 rounded-full border border-border bg-surface/90 px-3 py-1.5 text-xs font-semibold text-primary shadow-(--shadow-card) backdrop-blur-md">
       <span className="relative flex h-2 w-2">
         {isInProgress && (
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-tag-text opacity-40" />
