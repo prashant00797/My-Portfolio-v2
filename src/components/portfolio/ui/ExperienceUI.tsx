@@ -1,7 +1,16 @@
 import type { ExpereinceData } from "@/types";
-import React from "react";
 
 const expData: ExpereinceData[] = [
+  {
+    name: "Assistant Manager (Full Stack Developer)",
+    description: "EXL • Gurgaon • Jul 2026 - Present",
+    bullets: [
+      "Rebuilding a multi-tenant sports analytics platform from scratch as an individual contributor, migrating it from Python/Streamlit to a modern TypeScript stack.",
+      "Building end-to-end with TanStack Start, React, Tailwind CSS, Mantine UI, Drizzle ORM and PostgreSQL.",
+      "Designed a config-driven architecture that has onboarded multiple tenants, secured with PostgreSQL Row-Level Security (RLS) so each tenant can only access its own data.",
+      "Cut page load times by ~70% versus the legacy Python/Streamlit system by fixing its performance and efficiency gaps instead of doing a like-for-like migration.",
+    ],
+  },
   {
     name: "Development Engineer",
     description: "Avizva Solutions • Sep 2021 - Jan 2024",
@@ -18,35 +27,38 @@ const expData: ExpereinceData[] = [
 
 const Experience = () => {
   return (
-    <div id="experience" className="padding-margin bg-background mb-10">
-      <h1 className=" text-xl md:text-6xl text-primary font-display pl-4 mb-5">
+    <div id="experience" className="mb-20 md:mb-25 px-4">
+      <h1 className="text-2xl font-display font-bold text-primary mb-8">
         Experience
       </h1>
-      <div className="flex gap-4">
+      <div className="flex flex-col gap-4">
         {expData.map((item) => (
-          <React.Fragment key={item.name}>
-            <div className="px-4">
-              <h1 className="text-xs md:text-xl mb-1 text-secondary">
-                {item.name}
-              </h1>
-              <p className="text-xs md:text-[16px] mb-2 text-secondary">
-                {item.description}
-              </p>
-              <p className="text-xs md:text-[15px] mb-2 text-secondary">
-                <i>{item.promotion}</i>
-              </p>
-              <ul className="list-disc list-inside py-2">
-                {item.bullets.map((bullet, idx) => (
-                  <li
-                    key={idx}
-                    className="text-xs md:text-xl leading-7 text-secondary"
-                  >
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </React.Fragment>
+          <div
+            key={item.name}
+            className="card p-4 flex flex-col gap-1 custom-transition"
+          >
+            <span className="font-display text-lg md:text-xl font-semibold text-primary">
+              {item.name}
+            </span>
+            <span className="text-secondary text-sm font-display">
+              {item.description}
+            </span>
+            {item.promotion && (
+              <span className="text-secondary text-sm italic">
+                {item.promotion}
+              </span>
+            )}
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              {item.bullets.map((bullet, idx) => (
+                <li
+                  key={idx}
+                  className="text-secondary text-sm leading-relaxed"
+                >
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+          </div>
         ))}
       </div>
     </div>

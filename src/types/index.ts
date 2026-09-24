@@ -9,7 +9,7 @@ export type ContactData = {
 export type ExpereinceData = {
   name: string;
   description: string;
-  promotion: string;
+  promotion?: string;
   bullets: string[];
 };
 

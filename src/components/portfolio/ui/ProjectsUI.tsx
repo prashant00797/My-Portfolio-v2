@@ -7,6 +7,9 @@ import {
 } from "@/common/constants";
 import type { ProjectsData } from "@/types";
 
+// Toggle to show/hide the Product section
+const SHOW_PRODUCT = false;
+
 const product: ProjectsData[] = [
   {
     name: "Crevia",
@@ -154,20 +157,24 @@ const Projects = () => {
       </p>
 
       {/* Product */}
-      <div className="mb-10">
-        <div className="flex items-center gap-3 mb-1">
-          <h2 className="text-lg font-display font-semibold text-primary">
-            Product
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {product.map((project) => (
-            <ProjectCard key={project.name} project={project} />
-          ))}
-        </div>
-      </div>
+      {SHOW_PRODUCT && (
+        <>
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-1">
+              <h2 className="text-lg font-display font-semibold text-primary">
+                Product
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {product.map((project) => (
+                <ProjectCard key={project.name} project={project} />
+              ))}
+            </div>
+          </div>
 
-      <div className="border-t border-border my-8" />
+          <div className="border-t border-border my-8" />
+        </>
+      )}
 
       {/* Projects */}
       <div>

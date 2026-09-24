@@ -11,8 +11,8 @@ const Content = () => {
       <Navbar />
       <div className="container">
         <Hero />
-        <Projects />
         <Experience />
+        <Projects />
         <Skills />
         <Contact />
       </div>
